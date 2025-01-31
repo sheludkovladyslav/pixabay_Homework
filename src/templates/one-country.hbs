@@ -1,0 +1,23 @@
+<li class='countries__country country'>
+  <h2 class='country__title'>{{country.name.common}}</h2>
+  <div class='country__body'>
+    <div class='country__text'>
+      <p class='country__capital'><span class='bold'>Capital: </span>
+        {{#each country.capital}}{{this}}{{/each}}</p>
+      <p class='country__population'><span class='bold'>Population:
+        </span>{{country.population}}</p>
+
+      <div class='languages'>
+        <h3 class='languages__title'><span class='bold'>Languages:</span></h3>
+        <ul class='country__languages'>
+          {{#each country.languages}}
+            <li class='country__language'>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class='country__img'>
+      <img src='{{country.flags.png}}' alt='' class='country__img' />
+    </div>
+  </div>
+</li>
